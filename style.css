@@ -1,0 +1,112 @@
+/* General Body Styling */
+body {
+    text-align: center;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7, #f4f4f4);
+    background-size: 200% 200%;
+    animation: gradientBG 10s ease infinite;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+h1 {
+    color: #ff5722;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1:hover {
+    transform: scale(1.1);
+    color: #e91e63;
+}
+
+/* Paragraph Below Header */
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Image Gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+.gallery img:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
+    filter: brightness(1);
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #333;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+footer:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Adding a Nice Scroll Effect */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #ff5722, #e91e63);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #e91e63, #ff5722);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .gallery img {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .gallery img {
+        max-width: 200px;
+    }
+}
